@@ -1,0 +1,33 @@
+{
+  "title": "afet-tensions: AFET β-Hierarchie → Kosmologische Spannungen (Hubble, S₈) — GenesisAeon Package 34",
+  "description": "Falsifizierbare Erklärung der Hubble-Tension und S₈-Diskrepanz durch die AFET β-Hierarchie. Enthält BetaHierarchyModel, CREPRedshiftEvolution und Vorhersagen für LIGO O5, Euclid DR1, DESI DR2.",
+  "creators": [
+    {
+      "name": "Römer, Johann",
+      "affiliation": "MOR Research Collective"
+    }
+  ],
+  "keywords": [
+    "cosmology",
+    "hubble tension",
+    "S8 tension",
+    "AFET",
+    "CREP",
+    "UTAC",
+    "GenesisAeon",
+    "beta hierarchy",
+    "dark energy",
+    "structure growth"
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.17472834",
+      "relation": "isPartOf",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "GenesisAeon Package 34. Falsifikations-Zeitplan: DESI DR2 (2026), Euclid DR1 (2027), LIGO O5 (2028)."
+}
