@@ -1,8 +1,8 @@
-from .system import AFETTensions
+from . import constants
+from .benchmark import TENSIONS_TARGETS, run_benchmark
 from .beta_hierarchy import BetaHierarchyModel
 from .crep_redshift import CREPRedshiftEvolution
-from .benchmark import run_benchmark, TENSIONS_TARGETS
-from . import constants
+from .system import AFETTensions
 
 __all__ = [
     "AFETTensions",

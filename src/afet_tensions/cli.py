@@ -1,10 +1,11 @@
 import sys
+
 import typer
 from rich.console import Console
 from rich.table import Table
 
+from .benchmark import TENSIONS_TARGETS, run_benchmark
 from .system import AFETTensions
-from .benchmark import run_benchmark, TENSIONS_TARGETS
 
 app = typer.Typer(help="AFET Tensions — Package 34 CLI")
 console = Console()

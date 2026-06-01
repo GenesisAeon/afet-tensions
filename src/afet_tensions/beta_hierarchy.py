@@ -1,5 +1,6 @@
 import math
-from .constants import H0_CMB, SIGMA_PHI, GAMMA_DOMAIN, BETA_LOCAL, BETA_CMB
+
+from .constants import BETA_CMB, BETA_LOCAL, GAMMA_DOMAIN, H0_CMB, SIGMA_PHI
 
 
 class BetaHierarchyModel:

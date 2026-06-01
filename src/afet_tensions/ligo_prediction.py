@@ -1,4 +1,4 @@
-from .constants import OMEGA_RIG_HZ, V_RIG, C_KM_S, SIGMA_PHI, H0_CMB
+from .constants import OMEGA_RIG_HZ
 
 
 class LIGOPrediction:

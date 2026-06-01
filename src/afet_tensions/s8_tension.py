@@ -1,5 +1,5 @@
-from .crep_redshift import CREPRedshiftEvolution
 from .constants import S8_CMB, S8_WL
+from .crep_redshift import CREPRedshiftEvolution
 
 
 class S8TensionModel:

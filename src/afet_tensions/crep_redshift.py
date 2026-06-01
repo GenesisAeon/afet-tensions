@@ -1,6 +1,8 @@
 import math
+
 import numpy as np
 from scipy.integrate import solve_ivp
+
 from .constants import GAMMA_DOMAIN, S8_CMB
 
 

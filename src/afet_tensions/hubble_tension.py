@@ -1,5 +1,5 @@
 from .beta_hierarchy import BetaHierarchyModel
-from .constants import H0_LOCAL, H0_CMB, H0_RATIO
+from .constants import H0_CMB, H0_LOCAL, H0_RATIO
 
 
 class HubbleTensionModel:

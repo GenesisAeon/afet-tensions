@@ -1,16 +1,16 @@
 from .beta_hierarchy import BetaHierarchyModel
-from .crep_redshift import CREPRedshiftEvolution
-from .ligo_prediction import LIGOPrediction
-from .euclid_prediction import EuclidPrediction
-from .desi_prediction import DESIPrediction
 from .constants import (
+    BETA_LOCAL,
     GAMMA_DOMAIN,
     OMEGA_RIG_HZ,
-    S8_WL,
     S8_CMB,
+    S8_WL,
     SIGMA_PHI,
-    BETA_LOCAL,
 )
+from .crep_redshift import CREPRedshiftEvolution
+from .desi_prediction import DESIPrediction
+from .euclid_prediction import EuclidPrediction
+from .ligo_prediction import LIGOPrediction
 
 
 class AFETTensions:

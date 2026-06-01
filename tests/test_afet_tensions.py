@@ -1,7 +1,5 @@
-import pytest
-from afet_tensions import AFETTensions, BetaHierarchyModel, CREPRedshiftEvolution
-from afet_tensions import constants
-from afet_tensions.benchmark import run_benchmark, TENSIONS_TARGETS
+from afet_tensions import AFETTensions, BetaHierarchyModel, CREPRedshiftEvolution, constants
+from afet_tensions.benchmark import run_benchmark
 
 
 def test_constants_physically_reasonable():
