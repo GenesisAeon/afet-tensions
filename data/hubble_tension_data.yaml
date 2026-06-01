@@ -1,0 +1,30 @@
+measurements:
+  - name: "SH0ES (Riess+ 2022)"
+    h0: 73.04
+    sigma: 1.04
+    method: "Cepheid + SNe Ia"
+    type: late_universe
+  - name: "Planck 2018 (CMB)"
+    h0: 67.4
+    sigma: 0.5
+    method: "CMB power spectrum"
+    type: early_universe
+  - name: "H0LiCOW (Chen+ 2019)"
+    h0: 73.3
+    sigma: 1.7
+    method: "Strong lensing time delays"
+    type: late_universe
+  - name: "TRGB (Freedman+ 2021)"
+    h0: 69.8
+    sigma: 1.7
+    method: "Tip of Red Giant Branch"
+    type: late_universe
+  - name: "DESI DR1 (2024)"
+    h0: 68.52
+    sigma: 0.62
+    method: "BAO + BBN"
+    type: early_universe
+
+tension:
+  local_vs_cmb_sigma: 5.0
+  afet_explanation: "beta_hierarchy"
