@@ -11,9 +11,9 @@ class LIGOPrediction:
         return self.omega_rig_hz
 
     def snr_estimate(self, observation_years: float = 1.0) -> float:
-        return 2.3 * (observation_years / 1.0) ** 0.5
+        return float(2.3 * (observation_years / 1.0) ** 0.5)
 
-    def falsification_criterion(self) -> dict:
+    def falsification_criterion(self) -> dict[str, object]:
         return {
             "target_frequency_hz": self.omega_rig_hz,
             "tolerance_hz": 0.002,

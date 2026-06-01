@@ -18,9 +18,9 @@ class DESIPrediction:
 
     def dv_rd_predicted(self, z: float = 0.51) -> float:
         h0 = self.h0_bao(z)
-        return 13.36 * (h0 / 73.0) ** (-2 / 3)
+        return float(13.36 * (h0 / 73.0) ** (-2 / 3))
 
-    def falsification_criterion(self) -> dict:
+    def falsification_criterion(self) -> dict[str, object]:
         return {
             "mission": "DESI DR2",
             "expected_year": 2026,

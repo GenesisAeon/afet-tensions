@@ -25,7 +25,7 @@ def run_benchmark() -> dict[str, bool]:
 
     results = {}
     for key, (target, tol) in TENSIONS_TARGETS.items():
-        value = mapping[key]
+        value = float(mapping[key])  # type: ignore[arg-type]
         results[key] = abs(value - target) <= tol
 
     return results

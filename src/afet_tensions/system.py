@@ -21,7 +21,7 @@ class AFETTensions:
     SCALE = "cosmological"
     ZENODO = "10.5281/zenodo.17472834"
 
-    def __init__(self, z_range: tuple = (0, 10)) -> None:
+    def __init__(self, z_range: tuple[float, float] = (0, 10)) -> None:
         self.z_range = z_range
         self.beta_model = BetaHierarchyModel()
         self.crep = CREPRedshiftEvolution()
@@ -29,7 +29,7 @@ class AFETTensions:
         self.euclid = EuclidPrediction()
         self.desi = DESIPrediction()
 
-    def run_cycle(self, z_range: tuple = (0, 10)) -> dict:
+    def run_cycle(self, z_range: tuple[float, float] = (0, 10)) -> dict[str, object]:
         return {
             "h0_local": self.beta_model.h0_local(),
             "h0_cmb": self.beta_model.h0_cmb(),
@@ -43,7 +43,7 @@ class AFETTensions:
             "desi_dv_rd_z051": self.desi.dv_rd_predicted(0.51),
         }
 
-    def get_crep_state(self) -> dict:
+    def get_crep_state(self) -> dict[str, float]:
         gamma_z0 = self.crep.gamma_at_z(0.0)
         return {
             "C": gamma_z0,
@@ -53,7 +53,7 @@ class AFETTensions:
             "Gamma": gamma_z0,
         }
 
-    def get_utac_state(self) -> dict:
+    def get_utac_state(self) -> dict[str, float]:
         return {
             "r": BETA_LOCAL,
             "K": self.beta_model.h0_local(),
@@ -61,7 +61,7 @@ class AFETTensions:
             "H": self.beta_model.h0_effective(0.0),
         }
 
-    def get_phase_events(self) -> list:
+    def get_phase_events(self) -> list[dict[str, object]]:
         return [
             {
                 "z": 1100.0,
@@ -83,7 +83,7 @@ class AFETTensions:
             },
         ]
 
-    def to_zenodo_record(self) -> dict:
+    def to_zenodo_record(self) -> dict[str, object]:
         results = self.run_cycle()
         return {
             "doi": self.ZENODO,

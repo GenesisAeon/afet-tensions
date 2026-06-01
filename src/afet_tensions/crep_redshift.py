@@ -1,4 +1,5 @@
 import math
+from typing import Any
 
 import numpy as np
 from scipy.integrate import solve_ivp
@@ -16,7 +17,7 @@ class CREPRedshiftEvolution:
         z_span = (1100.0, 0.0)
         z_eval = np.linspace(1100.0, 0.0, 5000)
 
-        def rhs(z: float, y: list) -> list:
+        def rhs(z: float, y: list[float]) -> list[float]:
             gamma = y[0]
             # dΓ/dz = κ · (1 - Γ) · Γ  (logistic; negative dz direction handled by sign)
             return [self.kappa * (1.0 - gamma) * gamma]
@@ -36,8 +37,8 @@ class CREPRedshiftEvolution:
     def gamma_at_z(self, z: float) -> float:
         return float(np.interp(z, self._z_grid[::-1], self._gamma_grid[::-1]))
 
-    def gamma_array(self, z_values: np.ndarray) -> np.ndarray:
-        return np.interp(z_values, self._z_grid[::-1], self._gamma_grid[::-1])
+    def gamma_array(self, z_values: "np.ndarray[Any, Any]") -> "np.ndarray[Any, Any]":
+        return np.interp(z_values, self._z_grid[::-1], self._gamma_grid[::-1])  # type: ignore[no-any-return]
 
     def s8_at_z(self, z: float, s8_ref: float = S8_CMB, sigma: float = 2.2) -> float:
         g = self.gamma_at_z(z)

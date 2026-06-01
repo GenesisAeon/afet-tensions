@@ -15,7 +15,7 @@ class EuclidPrediction:
         gamma_z = self.crep.gamma_at_z(z)
         return 0.55 * gamma_z
 
-    def falsification_criterion(self) -> dict:
+    def falsification_criterion(self) -> dict[str, object]:
         return {
             "target_s8": S8_WL,
             "tolerance": 0.02,
