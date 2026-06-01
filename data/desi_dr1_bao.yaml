@@ -1,0 +1,38 @@
+release: "DESI DR1 2024"
+reference: "DESI Collaboration 2024, arXiv:2404.03002"
+
+measurements:
+  - z_eff: 0.295
+    tracer: "BGS"
+    dv_rd: 7.93
+    sigma: 0.15
+  - z_eff: 0.510
+    tracer: "LRG1"
+    dv_rd: 13.36
+    sigma: 0.22
+  - z_eff: 0.706
+    tracer: "LRG2"
+    dv_rd: 16.85
+    sigma: 0.32
+  - z_eff: 0.930
+    tracer: "LRG3+ELG1"
+    dv_rd: 21.71
+    sigma: 0.28
+  - z_eff: 1.317
+    tracer: "ELG2"
+    dv_rd: 27.79
+    sigma: 0.69
+  - z_eff: 1.491
+    tracer: "QSO"
+    dv_rd: 30.21
+    sigma: 0.79
+  - z_eff: 2.330
+    tracer: "Lya QSO"
+    dv_rd: 39.71
+    sigma: 0.94
+
+cosmology:
+  h0_bao: 68.52
+  h0_sigma: 0.62
+  omega_m: 0.295
+  afet_note: "BAO scale consistent with AFET beta-hierarchy gradient"

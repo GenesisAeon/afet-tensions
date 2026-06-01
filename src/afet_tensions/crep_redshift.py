@@ -5,7 +5,7 @@ from .constants import GAMMA_DOMAIN, S8_CMB
 
 
 class CREPRedshiftEvolution:
-    def __init__(self, kappa: float = 0.5, gamma_cmb: float = GAMMA_DOMAIN) -> None:
+    def __init__(self, kappa: float = 0.000708, gamma_cmb: float = GAMMA_DOMAIN) -> None:
         self.kappa = kappa
         self.gamma_cmb = gamma_cmb
         self._solve()
@@ -17,7 +17,7 @@ class CREPRedshiftEvolution:
         def rhs(z: float, y: list) -> list:
             gamma = y[0]
             # dΓ/dz = κ · (1 - Γ) · Γ  (logistic; negative dz direction handled by sign)
-            return [-self.kappa * (1.0 - gamma) * gamma]
+            return [self.kappa * (1.0 - gamma) * gamma]
 
         sol = solve_ivp(
             rhs,
