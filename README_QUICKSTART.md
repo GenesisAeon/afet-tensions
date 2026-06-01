@@ -1,52 +1,40 @@
-# Quick Start
+# Quick Start — afet-tensions (P34)
 
 ## Installation
 
 ```bash
-pip install <package-name>
+pip install afet-tensions
+# oder aus Quellcode:
+git clone https://github.com/GenesisAeon/afet-tensions.git
+cd afet-tensions
+uv sync --dev
 ```
 
-## Development Setup
+## Sofort loslegen
 
 ```bash
-git clone https://github.com/GenesisAeon/<repo-name>.git
-cd <repo-name>
-pip install -e ".[dev]"
+# Alle Vorhersagen ausgeben
+afet run
+
+# Benchmark (alle 6 Targets prüfen)
+afet benchmark
+
+# H₀_eff bei z=0.5
+afet h0-predict --z 0.5
+
+# S₈ bei z=1.0
+afet s8-predict --z 1.0
+
+# Wann welche Vorhersage testbar wird
+afet falsification-schedule
 ```
 
-## Running Tests
+## Tests ausführen
 
 ```bash
-pytest --cov=src
+uv run pytest
 ```
 
-## Linting
+## Zenodo
 
-```bash
-ruff check src tests
-mypy src
-```
-
-## Building Docs
-
-```bash
-mkdocs serve
-```
-
-## Release
-
-Tag a commit to trigger the automated release workflow:
-
-```bash
-git tag v0.1.0
-git push origin v0.1.0
-```
-
-The release workflow will:
-1. Build the wheel + sdist
-2. Publish to PyPI via Trusted Publishing (no token needed)
-3. Create a GitHub Release with auto-generated notes
-4. Trigger Zenodo archival (configure `ZENODO_TOKEN` secret)
-
----
-*Propagated from [diamond-setup](https://github.com/GenesisAeon/diamond-setup) v0.3.0.*
+[doi.org/10.5281/zenodo.17472834](https://doi.org/10.5281/zenodo.17472834)

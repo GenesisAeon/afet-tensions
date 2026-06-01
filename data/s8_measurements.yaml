@@ -1,0 +1,25 @@
+surveys:
+  - name: "KiDS-1000"
+    s8: 0.759
+    sigma: 0.024
+    method: "Weak gravitational lensing"
+    reference: "Asgari+ 2021"
+  - name: "DES Year 3"
+    s8: 0.776
+    sigma: 0.017
+    method: "Weak gravitational lensing + galaxy clustering"
+    reference: "DES Collaboration 2022"
+  - name: "Planck 2018 (CMB)"
+    s8: 0.832
+    sigma: 0.013
+    method: "CMB power spectrum + lensing"
+    reference: "Planck Collaboration 2020"
+  - name: "HSC Year 3"
+    s8: 0.769
+    sigma: 0.031
+    method: "Weak gravitational lensing"
+    reference: "Li+ 2023"
+
+tension:
+  wl_vs_cmb_sigma: 2.3
+  afet_explanation: "crep_redshift_evolution"
